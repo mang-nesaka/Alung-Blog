@@ -1,33 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Hyperdrive Matrix Mode
-  const matrixBtn = document.getElementById('matrix-btn');
-  let isHyper = false;
+  // Search toggle functionality
+  const searchBtn = document.getElementById('search-btn');
+  const searchModal = document.getElementById('search-modal');
+  const closeSearch = document.getElementById('close-search');
+  const searchInput = document.getElementById('search-input');
 
-  matrixBtn.addEventListener('click', () => {
-    isHyper = !isHyper;
-    document.body.classList.toggle('hyperdrive', isHyper);
-    matrixBtn.textContent = isHyper ? 'WARP ENGAGED 🚀' : 'HYPERDRIVE 🌌';
-  });
+  if (searchBtn && searchModal && closeSearch) {
+    searchBtn.addEventListener('click', () => {
+      searchModal.classList.toggle('active');
+      if (searchModal.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
 
-  // AI Slop Wisdom Generator
-  const quotes = [
-    '"Di setiap baris kode yang error, tersimpan lompatan logika yang membawa Alung semakin dekat ke masa depan!"',
-    '"Dari Sei Priok hingga puncak revolusi komputasi, batasan hanyalah algoritma yang belum dipecahkan."',
-    '"Coding bukan sekadar sintaks, ini adalah manifes kehendak manusia menundukkan logika mesin."',
-    '"Ketika AI menggebrak dunia, Alung Simatupang berdiri tegak di garis depan menyambut peradaban baru!"',
-    '"Debugging adalah seni membongkar ketidakmungkinan hingga tersisa mahakarya nyata."',
-    '"Teknologi sejati adalah ketika imajinasi liar bertransformasi menjadi solusi nyata bagi jutaan manusia."'
-  ];
+    closeSearch.addEventListener('click', () => {
+      searchModal.classList.remove('active');
+    });
 
-  const genBtn = document.getElementById('generate-slop-btn');
-  const quoteDisplay = document.getElementById('ai-quote-display');
+    // Realtime in-page search highlight
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      const storyBlocks = document.querySelectorAll('.story-block p, .story-block h3');
+      
+      storyBlocks.forEach(el => {
+        if (!term) {
+          el.style.backgroundColor = 'transparent';
+          return;
+        }
+        if (el.textContent.toLowerCase().includes(term)) {
+          el.style.backgroundColor = '#fef08a';
+        } else {
+          el.style.backgroundColor = 'transparent';
+        }
+      });
+    });
+  }
 
-  genBtn.addEventListener('click', () => {
-    quoteDisplay.style.opacity = '0';
-    setTimeout(() => {
-      const randomIndex = Math.floor(Math.random() * quotes.length);
-      quoteDisplay.textContent = quotes[randomIndex];
-      quoteDisplay.style.opacity = '1';
-    }, 200);
+  // Smooth scroll for nav items
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId !== '#' && document.querySelector(targetId)) {
+        e.preventDefault();
+        document.querySelector(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
   });
 });

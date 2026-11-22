@@ -3,181 +3,302 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🚀 ALUNG SIMATUPANG | THE NEXT-GEN AI & TECH REVOLUTION ⚡</title>
+  <title>Alung Blog — Tech, Journey & Development</title>
+  <meta name="description" content="Cerita perjalanan hidup dan ketertarikan terhadap dunia teknologi informasi oleh Alunggu Simatupang.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Ambient Animated Glowing Orbs -->
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
 
-  <!-- Futuristic Floating Navbar -->
-  <header class="cyber-nav">
-    <div class="nav-content">
-      <div class="cyber-brand">
-        <span class="pulsing-dot"></span>
-        <span class="brand-name">ALUNG<span class="gradient-text">.AI</span></span>
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#" class="brand">
+          <span class="brand-badge">A</span>
+          <span class="brand-text">alung<span class="brand-light">blog</span></span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#cerita-utama" class="active">JOURNEY</a></li>
+          <li><a href="#pendidikan">EDUCATION</a></li>
+          <li><a href="#teknologi">TECH & AI</a></li>
+          <li><a href="#tentang">ABOUT</a></li>
+        </ul>
       </div>
-      <div class="nav-pill">
-        <span class="live-status">⚡ LIVE ON CYBERSPACE</span>
-        <button id="matrix-btn" class="cyber-btn" title="Toggle Turbo Glow">HYPERDRIVE 🌌</button>
+      <div class="nav-right">
+        <button id="search-btn" class="nav-search-btn" aria-label="Cari artikel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>SEARCH</span>
+        </button>
+        <a href="#cerita-utama" class="cta-btn">BACA CERITA</a>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="page-container">
-    <!-- Hero Header with Mega Gradient & Badges -->
-    <section class="hero-section">
-      <div class="badge-cluster">
-        <span class="ai-badge neon-purple">✨ 10x REVOLUTIONARY DEVELOPER</span>
-        <span class="ai-badge neon-blue">🤖 AI POWERED CHRONICLES</span>
-        <span class="ai-badge neon-green">🔥 100% UNSTOPPABLE GRIND</span>
-      </div>
+  <!-- Search Modal / Bar -->
+  <div id="search-modal" class="search-modal">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="search-input" placeholder="Cari topik (Teknik Informatika, SMK, AI, Pemrograman)...">
+      <button id="close-search">&times;</button>
+    </div>
+  </div>
 
-      <h1 class="mega-headline">
-        FROM <span class="gradient-text-alt">SEI PRIOK</span> TO THE FRONTIER OF <span class="shimmer-text">ARTIFICIAL INTELLIGENCE</span>
-      </h1>
+  <main class="main-wrapper">
+    <!-- Top Hero Section (Featured Article + Staff Picks Grid) -->
+    <section class="hero-grid">
+      
+      <!-- Big Featured Card -->
+      <article class="featured-card" id="cerita-utama">
+        <div class="featured-banner">
+          <div class="banner-pattern pattern-cyan"></div>
+          <div class="banner-pattern pattern-blue"></div>
+          <div class="featured-visual">
+            <div class="coder-illustration">
+              <div class="laptop-screen">
+                <span class="code-line">// alung.journey</span>
+                <span class="code-line">const dream = "Impact";</span>
+                <span class="code-line">build(future);</span>
+              </div>
+              <div class="coder-avatar">AS</div>
+            </div>
+          </div>
+        </div>
+        <div class="featured-body">
+          <span class="category-tag tag-cyan">JOURNEY & EDUCATION</span>
+          <h2 class="featured-title">
+            <a href="#baca-lengkap">Cerita Perjalanan Hidup dan Ketertarikan Saya Terhadap Dunia IT</a>
+          </h2>
+          <p class="featured-excerpt">
+            Dari Sei Priok, menyelami Rekayasa Perangkat Lunak di SMK RK Bintang Timur Pematang Siantar, hingga memperdalam Teknik Informatika di Universitas Bandung.
+          </p>
+          <div class="author-row">
+            <span class="author-name">Alunggu Simatupang</span>
+            <span class="dot">&bull;</span>
+            <span class="read-duration">4 min read</span>
+          </div>
+        </div>
+      </article>
 
-      <p class="hero-punchline">
-        The Odyssey of a Visionary Technologist Unleashing Potential Through Lines of Code, Silicon Dreams, and Neural Architectures.
-      </p>
+      <!-- Sidebar: Staff Picks -->
+      <aside class="sidebar-picks">
+        <div class="picks-header">
+          <svg class="star-icon" viewBox="0 0 24 24" fill="#00d284">
+            <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+          </svg>
+          <h3>Sorotan Topik</h3>
+        </div>
 
-      <!-- Glassmorphism Stats Counter Dashboard -->
-      <div class="dashboard-grid">
-        <div class="glass-metric">
-          <div class="metric-icon">🚀</div>
-          <div class="metric-val">SEMESTER 6</div>
-          <div class="metric-sub">Tech Mastermind</div>
+        <div class="picks-list">
+          <a href="#point-1" class="pick-item">
+            <span class="pick-category cat-green">FONDASI AWAL</span>
+            <h4 class="pick-title">Mengenal Rekayasa Perangkat Lunak di SMK RK Bintang Timur Pematang Siantar</h4>
+          </a>
+
+          <a href="#point-2" class="pick-item active-pick">
+            <span class="pick-category cat-teal">KAMPUS</span>
+            <h4 class="pick-title">Menempuh Semester 6 Teknik Informatika di Universitas Bandung</h4>
+          </a>
+
+          <a href="#point-3" class="pick-item">
+            <span class="pick-category cat-blue">PERSPEKTIF</span>
+            <h4 class="pick-title">Dari Sekadar Kode Menjadi Solusi Kreatif bagi Banyak Orang</h4>
+          </a>
+
+          <a href="#point-4" class="pick-item">
+            <span class="pick-category cat-purple">MASA DEPAN</span>
+            <h4 class="pick-title">Kecerdasan Buatan (AI): Antara Peluang Emas dan Tantangan Baru</h4>
+          </a>
         </div>
-        <div class="glass-metric">
-          <div class="metric-icon">🧠</div>
-          <div class="metric-val">100+ BUGS</div>
-          <div class="metric-sub">Debugged into Glory</div>
-        </div>
-        <div class="glass-metric">
-          <div class="metric-icon">⚡</div>
-          <div class="metric-val">99.9%</div>
-          <div class="metric-sub">Resilience Index</div>
-        </div>
-        <div class="glass-metric">
-          <div class="metric-icon">🔮</div>
-          <div class="metric-val">AI ERA</div>
-          <div class="metric-sub">Ready to Dominate</div>
-        </div>
-      </div>
+      </aside>
+
     </section>
 
-    <!-- Interactive AI Insight Cards -->
-    <section class="chronicle-timeline">
-      <div class="timeline-header">
-        <span class="section-tag">💡 MASTERCLASS JOURNEY</span>
-        <h2>CHRONICLES OF AN IT VISIONARY</h2>
-      </div>
-
-      <div class="epic-card glass-glow">
-        <div class="card-aura"></div>
-        <div class="card-number">CHAPTER 01</div>
-        <h3>🌱 The Genesis: Sei Priok & The Sparks of Passion</h3>
-        <p>
-          Perkenalkan, nama saya <strong>Alunggu Simatupang</strong>. Saya lahir di Sei Priok pada tanggal 19 Desember 1999. Saat ini saya sedang menempuh pendidikan di <strong>Universitas Bandung, Program Studi Teknik Informatika</strong>, dan sudah memasuki semester 6. Saya termasuk orang yang tertarik dengan dunia teknologi, terutama hal-hal yang berhubungan dengan komputer, pemrograman, dan perkembangan dunia digital.
-        </p>
-      </div>
-
-      <div class="epic-card glass-glow">
-        <div class="card-aura"></div>
-        <div class="card-number">CHAPTER 02</div>
-        <h3>⚡ The Awakening: SMK RK Bintang Timur & Software Alchemy</h3>
-        <p>
-          Ketertarikan saya terhadap dunia teknologi mulai tumbuh ketika saya duduk di bangku SMK. Saya bersekolah di <strong>SMK RK Bintang Timur Pematang Siantar</strong> dan mengambil jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong>. Di sana saya mulai mengenal bagaimana komputer bekerja, bagaimana sebuah program dibuat, dan bagaimana teknologi bisa digunakan untuk membantu pekerjaan manusia.
-        </p>
-        <p>
-          Awalnya, dunia pemrograman terasa cukup sulit bagi saya. Ada banyak hal baru yang harus dipelajari, mulai dari memahami kode program, mencari kesalahan dalam penulisan kode, sampai mencoba membuat aplikasi sederhana. Namun, justru dari situlah saya mulai merasa tertarik. Ada kepuasan tersendiri ketika program yang sebelumnya mengalami error akhirnya bisa berjalan sesuai dengan apa yang saya inginkan.
-        </p>
-        <div class="highlight-callout-ai">
-          <span class="callout-sparkle">✨ UNLOCKING THE MATRIX:</span>
-          <em>"Ada kepuasan tak ternilai saat error berubah menjadi mahakarya fungsional."</em>
+    <!-- 3-Column Card Grid (Grammarly Secondary Row) -->
+    <section class="cards-grid">
+      
+      <!-- Card 1 -->
+      <article class="card-item">
+        <div class="card-thumb thumb-green">
+          <div class="thumb-badge">SMK RPL</div>
+          <div class="circle-deco c-1"></div>
+          <div class="circle-deco c-2"></div>
         </div>
-      </div>
+        <div class="card-body">
+          <span class="category-tag tag-green">ORIGIN STORY</span>
+          <h3 class="card-title">Sensasi Debugging: Dari Error Membingungkan Jadi Kebanggaan</h3>
+          <p class="card-desc">Bagaimana rasa frustrasi mencari bug di masa sekolah berubah jadi bahan bakar kecintaan pada coding.</p>
+        </div>
+      </article>
 
-      <div class="epic-card glass-glow">
-        <div class="card-aura"></div>
-        <div class="card-number">CHAPTER 03</div>
-        <h3>🎓 Deep Dive: Scaling Up at Universitas Bandung</h3>
-        <p>
-          Setelah lulus dari SMK, saya memutuskan untuk melanjutkan pendidikan ke <strong>Universitas Bandung</strong> dengan mengambil jurusan <strong>Teknik Informatika</strong>. Keputusan ini saya ambil karena ingin memperdalam pengetahuan dan kemampuan saya di bidang teknologi informasi. Selama kuliah, saya mendapatkan banyak pengalaman dan ilmu baru. Saya belajar tentang pemrograman, database, pembuatan website, pengembangan aplikasi, jaringan komputer, serta berbagai materi lain yang berkaitan dengan teknologi.
-        </p>
-        <p>
-          Semakin lama belajar di bidang IT, saya semakin menyadari bahwa teknologi memiliki peran yang sangat besar dalam kehidupan sehari-hari. Sekarang hampir semua aktivitas manusia sudah berhubungan dengan teknologi. Kita menggunakan teknologi untuk berkomunikasi, belajar, bekerja, berbisnis, bahkan untuk mencari hiburan. Hal sederhana seperti memesan makanan, melakukan pembayaran, dan mendapatkan informasi pun sekarang bisa dilakukan melalui sebuah aplikasi.
-        </p>
-      </div>
+      <!-- Card 2 -->
+      <article class="card-item">
+        <div class="card-thumb thumb-gray">
+          <div class="laptop-minimal">
+            <div class="keyboard-grid">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="category-tag tag-teal">EXPANSION</span>
+          <h3 class="card-title">Eksplorasi Web, Database, Jaringan & Algoritma di Kuliah</h3>
+          <p class="card-desc">Mempelajari ekosistem rekayasa software modern secara menyeluruh selama 6 semester.</p>
+        </div>
+      </article>
 
-      <div class="epic-card glass-glow special-focus">
-        <div class="card-aura"></div>
-        <div class="card-number">CHAPTER 04</div>
-        <h3>💡 Manifesting Reality: Turning Bold Ideas into Impact</h3>
-        <p>
-          Menurut saya, hal yang paling menarik dari dunia IT adalah <strong>kita bisa membuat sesuatu yang awalnya hanya berupa ide menjadi sebuah produk yang benar-benar bisa digunakan</strong>. Misalnya, membuat website untuk sekolah, aplikasi untuk membantu pekerjaan, atau sistem informasi yang mempermudah pengelolaan data.
-        </p>
-        <p>
-          Dari situ saya mulai memahami bahwa kemampuan di bidang IT bukan hanya tentang menguasai bahasa pemrograman, tetapi juga bagaimana kita bisa berpikir kreatif dan menemukan solusi dari suatu permasalahan.
-        </p>
-      </div>
+      <!-- Card 3 -->
+      <article class="card-item">
+        <div class="card-thumb thumb-blue">
+          <div class="ui-mockup">
+            <div class="mockup-bar"></div>
+            <div class="mockup-line w-70"></div>
+            <div class="mockup-line w-40"></div>
+            <div class="mockup-pill">AI Assist: Active</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="category-tag tag-blue">INNOVATION</span>
+          <h3 class="card-title">Masa Depan AI: Bukan Pengganti, Tapi Akselerator Inovasi</h3>
+          <p class="card-desc">Mengapa kemajuan AI justru memotivasi mahasiswa IT untuk terus belajar dan adaptif.</p>
+        </div>
+      </article>
 
-      <div class="epic-card glass-glow">
-        <div class="card-aura"></div>
-        <div class="card-number">CHAPTER 05</div>
-        <h3>🤖 Surfing The Frontier: The Artificial Intelligence Paradigm</h3>
-        <p>
-          Saya juga tertarik mengikuti perkembangan teknologi yang semakin maju, terutama <strong>kecerdasan buatan atau Artificial Intelligence (AI)</strong>. Saat ini AI sudah banyak membantu manusia dalam berbagai pekerjaan, mulai dari mencari informasi, membuat desain, mengolah data, hingga membantu proses pemrograman. Menurut saya, perkembangan ini sangat menarik karena memberikan banyak kemudahan sekaligus tantangan bagi orang-orang yang ingin berkarier di bidang teknologi.
-        </p>
-        <p>
-          Walaupun begitu, saya menyadari bahwa belajar IT tidak selalu mudah. Terkadang ada materi yang sulit dipahami, program yang tidak berjalan sesuai harapan, atau tugas yang membutuhkan waktu cukup lama untuk diselesaikan. Namun, saya percaya bahwa semua itu merupakan bagian dari proses belajar. Saya tidak harus langsung bisa menguasai semuanya, tetapi saya harus memiliki kemauan untuk terus mencoba dan belajar dari kesalahan.
-        </p>
-      </div>
-
-      <div class="epic-card glass-glow">
-        <div class="card-aura"></div>
-        <div class="card-number">CHAPTER 06</div>
-        <h3>🌌 Horizon & Beyond: Building The Future</h3>
-        <p>
-          Harapan saya ke depannya adalah bisa menjadi seseorang yang memiliki kemampuan dan pengalaman yang baik di bidang teknologi informasi. Saya ingin mengembangkan kemampuan dalam membuat website, aplikasi, maupun sistem yang dapat memberikan manfaat bagi orang lain. Saya juga ingin terus mengikuti perkembangan teknologi agar tidak tertinggal oleh perubahan zaman.
-        </p>
-        <p>
-          Bagi saya, dunia IT bukan hanya tentang komputer dan kode program. Lebih dari itu, IT adalah tentang ide, kreativitas, pemecahan masalah, dan bagaimana teknologi dapat membantu kehidupan manusia menjadi lebih mudah. Saya percaya bahwa selama kita mau belajar dan tidak mudah menyerah, selalu ada kesempatan untuk berkembang.
-        </p>
-        <p>
-          Itulah sedikit cerita tentang perjalanan pendidikan dan ketertarikan saya terhadap dunia Teknologi Informasi. Saya berharap perjalanan yang sedang saya jalani saat ini bisa menjadi awal untuk meraih cita-cita dan menghasilkan sesuatu yang bermanfaat di masa depan.
-        </p>
-      </div>
     </section>
 
-    <!-- Super Hype AI Feedback Generator -->
-    <section class="slop-generator-zone">
-      <div class="generator-box">
-        <span class="gen-tag">🔮 QUANTUM AI INSPIRATION GENERATOR</span>
-        <h3>Dapatkan Kutipan Penyemangat Khusus dari AI</h3>
-        <p id="ai-quote-display">"Di setiap baris kode yang error, tersimpan lompatan logika yang membawa Alung semakin dekat ke masa depan!"</p>
-        <button id="generate-slop-btn" class="hype-button">
-          <span>GENERATE MORE AI WISDOM ✨</span>
-        </button>
+    <!-- Reading Section: Full Narrative Article -->
+    <section class="article-reader" id="baca-lengkap">
+      <div class="reader-container">
+        
+        <header class="reader-header">
+          <div class="breadcrumb">
+            <a href="#">Beranda</a> &rsaquo; <span>Cerita Lengkap</span>
+          </div>
+          <h1 class="reader-title">CERITA PERJALANAN HIDUP DAN KETERTARIKAN SAYA TERHADAP DUNIA IT</h1>
+          <div class="reader-meta">
+            <div class="meta-avatar">AS</div>
+            <div>
+              <strong>Alunggu Simatupang</strong>
+              <div class="meta-sub">Mahasiswa Teknik Informatika &bull; Universitas Bandung &bull; Angkatan 1999</div>
+            </div>
+          </div>
+        </header>
+
+        <div class="reader-content">
+          <p class="lead-paragraph">
+            Perkenalkan, nama saya <strong>Alunggu Simatupang</strong>. Saya lahir di Sei Priok pada tanggal 19 Desember 1999. Saat ini saya sedang menempuh pendidikan di Universitas Bandung, Program Studi Teknik Informatika, dan sudah memasuki semester 6. Saya termasuk orang yang tertarik dengan dunia teknologi, terutama hal-hal yang berhubungan dengan komputer, pemrograman, dan perkembangan dunia digital.
+          </p>
+
+          <div id="point-1" class="story-block">
+            <h3>Awal Mula di Bangku SMK Rekayasa Perangkat Lunak</h3>
+            <p>
+              Ketertarikan saya terhadap dunia teknologi mulai tumbuh ketika saya duduk di bangku SMK. Saya bersekolah di <strong>SMK RK Bintang Timur Pematang Siantar</strong> dan mengambil jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong>. Di sana saya mulai mengenal bagaimana komputer bekerja, bagaimana sebuah program dibuat, dan bagaimana teknologi bisa digunakan untuk membantu pekerjaan manusia.
+            </p>
+            <p>
+              Awalnya, dunia pemrograman terasa cukup sulit bagi saya. Ada banyak hal baru yang harus dipelajari, mulai dari memahami kode program, mencari kesalahan dalam penulisan kode, sampai mencoba membuat aplikasi sederhana. Namun, justru dari situlah saya mulai merasa tertarik. Ada kepuasan tersendiri ketika program yang sebelumnya mengalami error akhirnya bisa berjalan sesuai dengan apa yang saya inginkan.
+            </p>
+          </div>
+
+          <div id="point-2" class="story-block">
+            <h3>Melangkah ke Universitas Bandung</h3>
+            <p>
+              Setelah lulus dari SMK, saya memutuskan untuk melanjutkan pendidikan ke <strong>Universitas Bandung</strong> dengan mengambil jurusan <strong>Teknik Informatika</strong>. Keputusan ini saya ambil karena ingin memperdalam pengetahuan dan kemampuan saya di bidang teknologi informasi.
+            </p>
+            <p>
+              Selama kuliah, saya mendapatkan banyak pengalaman dan ilmu baru. Saya belajar tentang pemrograman, database, pembuatan website, pengembangan aplikasi, jaringan komputer, serta berbagai materi lain yang berkaitan dengan teknologi.
+            </p>
+          </div>
+
+          <div class="grammarly-banner-card">
+            <div class="banner-callout-icon">💡</div>
+            <div class="banner-callout-text">
+              <h4>Prinsip Esensial Dunia IT</h4>
+              <p>"Kemampuan di bidang IT bukan hanya tentang menguasai bahasa pemrograman, tetapi juga bagaimana kita bisa berpikir kreatif dan menemukan solusi dari suatu permasalahan."</p>
+            </div>
+          </div>
+
+          <div id="point-3" class="story-block">
+            <h3>Teknologi dalam Kehidupan Sehari-hari & Daya Tariknya</h3>
+            <p>
+              Semakin lama belajar di bidang IT, saya semakin menyadari bahwa teknologi memiliki peran yang sangat besar dalam kehidupan sehari-hari. Sekarang hampir semua aktivitas manusia sudah berhubungan dengan teknologi. Kita menggunakan teknologi untuk berkomunikasi, belajar, bekerja, berbisnis, bahkan untuk mencari hiburan. Hal sederhana seperti memesan makanan, melakukan pembayaran, dan mendapatkan informasi pun sekarang bisa dilakukan melalui sebuah aplikasi.
+            </p>
+            <p>
+              Menurut saya, hal yang paling menarik dari dunia IT adalah kita bisa membuat sesuatu yang awalnya hanya berupa ide menjadi sebuah produk yang benar-benar bisa digunakan. Misalnya, membuat website untuk sekolah, aplikasi untuk membantu pekerjaan, atau sistem informasi yang mempermudah pengelolaan data.
+            </p>
+          </div>
+
+          <div id="point-4" class="story-block">
+            <h3>Menatap Era Artificial Intelligence (AI)</h3>
+            <p>
+              Saya juga tertarik mengikuti perkembangan teknologi yang semakin maju, terutama kecerdasan buatan atau Artificial Intelligence (AI). Saat ini AI sudah banyak membantu manusia dalam berbagai pekerjaan, mulai dari mencari informasi, membuat desain, mengolah data, hingga membantu proses pemrograman. Menurut saya, perkembangan ini sangat menarik karena memberikan banyak kemudahan sekaligus tantangan bagi orang-orang yang ingin berkarier di bidang teknologi.
+            </p>
+            <p>
+              Walaupun begitu, saya menyadari bahwa belajar IT tidak selalu mudah. Terkadang ada materi yang sulit dipahami, program yang tidak berjalan sesuai harapan, atau tugas yang membutuhkan waktu cukup lama untuk diselesaikan. Namun, saya percaya bahwa semua itu merupakan bagian dari proses belajar. Saya tidak harus langsung bisa menguasai semuanya, tetapi saya harus memiliki kemauan untuk terus mencoba dan belajar dari kesalahan.
+            </p>
+          </div>
+
+          <div class="story-block">
+            <h3>Harapan & Visi Masa Depan</h3>
+            <p>
+              Harapan saya ke depannya adalah bisa menjadi seseorang yang memiliki kemampuan dan pengalaman yang baik di bidang teknologi informasi. Saya ingin mengembangkan kemampuan dalam membuat website, aplikasi, maupun sistem yang dapat memberikan manfaat bagi orang lain. Saya juga ingin terus mengikuti perkembangan teknologi agar tidak tertinggal oleh perubahan zaman.
+            </p>
+            <p>
+              Bagi saya, dunia IT bukan hanya tentang komputer dan kode program. Lebih dari itu, IT adalah tentang ide, kreativitas, pemecahan masalah, dan bagaimana teknologi dapat membantu kehidupan manusia menjadi lebih mudah. Saya percaya bahwa selama kita mau belajar dan tidak mudah menyerah, selalu ada kesempatan untuk berkembang.
+            </p>
+            <p>
+              Itulah sedikit cerita tentang perjalanan pendidikan dan ketertarikan saya terhadap dunia Teknologi Informasi. Saya berharap perjalanan yang sedang saya jalani saat ini bisa menjadi awal untuk meraih cita-cita dan menghasilkan sesuatu yang bermanfaat di masa depan.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="article-feedback" id="tentang">
+          <div class="author-badge-footer">
+            <div class="big-avatar">AS</div>
+            <div>
+              <h3>Alunggu Simatupang</h3>
+              <p>Mahasiswa Teknik Informatika semester 6 di Universitas Bandung. Memiliki ketertarikan mendalam dalam software engineering, web development, dan kecerdasan buatan.</p>
+              <div class="social-tags">
+                <a href="https://github.com/mang-nesaka" target="_blank" rel="noopener noreferrer">GitHub: @mang-nesaka</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
-
-    <!-- Ultra Footer -->
-    <footer class="cyber-footer">
-      <div class="footer-gradient-bar"></div>
-      <p>PROUDLY CRAFTED FOR <strong>ALUNGGU SIMATUPANG</strong> &bull; POWERED BY 100% PURE MAXIMUM AI ENERGY 🚀</p>
-      <div class="footer-links">
-        <a href="https://github.com/mang-nesaka" target="_blank">GITHUB: @MANG-NESAKA</a>
-        <span>&bull;</span>
-        <span>SEI PRIOK TO BANDUNG & BEYOND</span>
-      </div>
-    </footer>
   </main>
+
+  <!-- Clean Corporate Footer -->
+  <footer class="main-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <a href="#" class="brand footer-brand">
+          <span class="brand-badge">A</span>
+          <span class="brand-text">alung<span class="brand-light">blog</span></span>
+        </a>
+        <p class="footer-tagline">Membagikan catatan, wawasan, dan perjalanan belajar di industri teknologi informasi.</p>
+      </div>
+      <div class="footer-col-right">
+        <div class="footer-links">
+          <span>&copy; 2026 Alunggu Simatupang. All rights reserved.</span>
+          <span class="footer-sep">&bull;</span>
+          <a href="https://github.com/mang-nesaka/Alung-Blog" target="_blank">Repository</a>
+          <span class="footer-sep">&bull;</span>
+          <a href="https://github.com/mang-nesaka" target="_blank">GitHub Profile</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
